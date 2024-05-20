@@ -48,7 +48,7 @@ const questions = [
   {
     "question": "What is your favorite time of day?",
     "answer1": "Dawn",
-    "answer1Total": "-1",
+    "answer1Total": "1",
    
     // add extra thing into here if time...then do an onclick event
 
