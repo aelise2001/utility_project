@@ -1,3 +1,47 @@
+
+let userName;
+
+// Add an event listener
+const userNameInput = document.getElementById('user-name');
+userNameInput.addEventListener('keypress', function(event) {
+    // Check if the Enter pressed (key code 13)
+    if (event.keyCode === 13) {
+        
+        event.preventDefault();
+       
+        userName = userNameInput.value;
+       
+        initializeQuiz(userName);
+        // Clear  input field
+        userNameInput.value = '';
+        // Hide  form
+        nameForm.style.display = 'none';
+    }
+});
+
+// Add an event listener 
+const nameForm = document.getElementById('name-form');
+nameForm.addEventListener('submit', function(event) {
+   
+    event.preventDefault();
+  
+    userName = userNameInput.value;
+   
+    initializeQuiz(userName);
+   
+    userNameInput.value = '';
+    
+    nameForm.style.display = 'none';
+});
+
+
+function initializeQuiz(userName) {
+    
+}
+
+
+
+
 // QUESTIONS
 
 const questions = [
@@ -6,7 +50,7 @@ const questions = [
     "answer1": "Dawn",
     "answer1Total": "1",
    
-    // add extra thing into here...then do an onclick event
+    // add extra thing into here if time...then do an onclick event
 
     "answer2": "Morning",
     "answer2Total": "2",
@@ -25,8 +69,7 @@ const questions = [
     "answer3Total": "3",
      "answer4": "Quality time",
     "answer4Total": "4"
-    // "answer5": "Receiving/Giving Gifts",
-    // "answer5Total": "5",
+   
     
   },
   {
@@ -107,7 +150,7 @@ function generateQuestions (index) {
     option2.innerHTML = `${question.answer2}`
     option3.innerHTML = `${question.answer3}`
     option4.innerHTML = `${question.answer4}`
-//     option5.innerHTML = `${question.answer5}`
+
 }
 
 
@@ -146,7 +189,7 @@ function loadNextQuestion () {
     if(currentQuestion == totalQuestions) {
         container.style.display = 'none';
         result.innerHTML =
-         `<h1 class="final-score">Your score: ${totalScore}</h1>
+         `<h1 class="final-score">Hi ${userName}! Your score is: ${totalScore}</h1>
          <div class="summary">
             <h1>Summary</h1>
             <p> see below for results:</p>
