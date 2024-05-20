@@ -193,8 +193,8 @@ function loadNextQuestion () {
          <div class="summary">
             <h1>Summary</h1>
             <p> see below for results:</p>
-            <p><b> 1-4 Get Active! <em> Go for a run! do some Yoga! Have a dance party! </em></b>  <br> Just get your blood flowing.</p>
-            <p ><b> 5-8  <em> Cook a meal or bake a sweet treat! </em> </b> <br> Cookies,cupcakes,bread and more. YUM!</p>
+            <p><b> 1-5 Get Active! <em> Go for a run! do some Yoga! Have a dance party! </em></b>  <br> Just get your blood flowing.</p>
+            <p ><b> 6-8  <em> Cook a meal or bake a sweet treat! </em> </b> <br> Cookies,cupcakes,bread and more. YUM!</p>
             <p> <b> 9-12 <em> Read, read read! </b> </em> <br> A book, a magazine, a traveling brochure. Curl up and let out your inner intellectual. </p>
             <p> <b> 13-16  <em> Watch a movie! </em> </b> <br> Get lost that magical feeling when the lights start to dim. </p>
             <p> <b> 16-20  <em>  Go out on the town! </em> </b> <br> Party party party! </p>
