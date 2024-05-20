@@ -1,0 +1,265 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+/* * {
+    box-sizing: border-box;
+} */
+
+
+
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    /* height: 100%; */
+    font-size: 16px;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    line-height: 1.7rem;
+    background: no-repeat linear-gradient(250deg,#E0FFFF,#AFEEEE)
+  
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*make images full bleed on mobile*/
+img{
+display:block;
+width:95%;
+padding-bottom:10px;
+/* margin: 30px; */
+
+}
+/*make container max 800px and give auto margin*/
+.container{
+display:block;
+max-width: 800px;
+margin: 0 auto;
+
+}
+
+.quiz-container {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 1px 1px white; */
+  padding: 2rem;
+  /* text-shadow: 0 1px #00000010; */
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(360deg, transparent, #F0F8FF);
+  /* min-height: 100vh; */
+}
+.title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: black;
+  font-weight: 400;
+  font-size: 2.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.question {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+.option {
+  padding: 1rem;
+  color: black;
+  background:rgb(176, 224, 230, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.option:hover {
+  background:rgb(64, 224, 208,0.4);
+}
+.option input:checked .option {
+  background: #08038c;
+  color: #000;
+}
+.controls > * {
+  margin: 1rem;
+}
+button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-weight: 300;
+  color: white;
+  outline: none;
+  transform: scale(0.98);
+  transition: all 0.2s;
+}
+button.previous {
+  background:#96d6eb;
+}
+button.next {
+  background:#4682B4;
+}
+button.restart {
+  background: #70a0b0;
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s;
+}
+button.restart:hover {
+  color: #00000098;
+}
+button:hover,
+button:focus {
+  transform: scale(1);
+  font-weight: 500;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  min-height: 100vh;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.final-score {
+  color: black;
+}
+.summary {
+  font-size: 1rem;
+  text-shadow: 1px 1px #ffffff50;
+  color: black;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.summary h1 {
+  align-self: center;
+}
+
+
+.subhead 
+{text-align: center;
+
+}
+
+p {
+    /* font-family: 'Arial', sans-serif; */
+    text-align: center;
+    /* font-size: 1em; */
+    margin: 30px;
+    padding-left: 25px;
+}
+
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 600px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+    .quiz-container {
+      padding:3rem;
+      width:80%;
+    }
+
+    .title{
+      font-size: 2.5rem;
+    }
+    
+
+    .question {
+font-size: 1.5rem;
+
+    }
+
+    .option{
+
+      width:80%;
+    }
+
+    button {
+
+      padding: 0.75rem 2rem;
+    }
+
+/* desktop styling */
+@media (min-width: 900px){
+
+.quiz-container{
+width:60%;
+
+
+}
+
+.title{
+
+  font-size: 3rem;
+}
+
+.question{ 
+
+  font-size: 1.8rem;
+}
+
+.option {
+
+  width: 70%;
+}
+
+
+}
+
+
+
+
+.flex{
+  display:flex;
+  justify-content: space-between;
+}
+
+.column {
+  float: none;
+  width: 100%;
+}
+
+.flex > div{
+flex-basis: 100%;
+padding: 10px;
+
+}
+
+
+
+
+}
